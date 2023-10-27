@@ -1,0 +1,44 @@
+// common settings
+$fontsize: 1.6rem;
+$lineHeight: 1.25;
+
+
+// fonts
+$font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell,"Open Sans","Helvetica Neue", sans-serif;
+$font-family-FuturaPT: 'Futura PT', sans-serif, arial;
+
+
+// colors
+$color-black: #000;
+$color-white: #FFF;
+$color-red: #EC3F3F;
+$color-red-darken: #FF1E1E;
+$color-cod-gray: #181818;
+$color-gray: #343338;
+
+
+
+// font color
+$color: $color-white;
+$color-accent: $color-red;
+
+
+
+// Settings
+$desktop-xl: 1260;
+$desktop: 1200;
+$laptop: 992;
+$tablet: 768;
+$mobile-hr: 576;
+$mobile: 320;
+$desktop-vh: 750;
+
+
+// header height
+$headerHeight: (
+	"desktop": 90px,
+	"laptop": 90px,
+	"tablet": 84px,
+	"mobileHR": 63px,
+	"mobile": 45px
+)

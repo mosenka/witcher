@@ -1,0 +1,31 @@
+// social
+$color: red;
+
+.social {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+
+	&__icon {
+		@include size(32px, 32px);
+		//display: flex;
+		//align-items: center;
+		//justify-content: center;
+		background-color: transparent;
+		color: rgba($color-white, 0.8);
+		border-radius: 50%;
+		transition: all .4s;
+
+		@include states {
+			color: $color-red-darken;
+		}
+
+		svg {
+			max-width: 30px;
+			height: 30px;
+		}
+	}
+
+}
+// end social

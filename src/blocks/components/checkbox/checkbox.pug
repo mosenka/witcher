@@ -1,0 +1,5 @@
+mixin checkbox(label, id)
+	- var labelClasses = ['checkbox__label' ];
+	.checkbox
+		input._input(type="checkbox", id!=id)&attributes(attributes)
+		label(class=labelClasses for!=id)!=label

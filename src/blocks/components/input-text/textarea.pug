@@ -1,0 +1,10 @@
+mixin textarea(label, isError=false)
+	- var classes = [ isError && 'is-error']
+
+	.input-text.js--text-input-wrapper(class=classes)
+		textarea._input.js--text-input(rows="4")&attributes(attributes)
+		span._placeholder.js--text-placeholder!=label
+		if isError
+			span._error
+				| Поле не заполненно
+

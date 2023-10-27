@@ -1,0 +1,8 @@
+mixin dropdown(head, list)
+	.dropdown.js--dropdown
+		input._input.js--dropdown-input(type="hidden" name="city", value="")
+		._head.js--dropdown-head!=head
+
+		._content.js--dropdown-content
+			each item in list
+				._item.js--dropdown-item!=item

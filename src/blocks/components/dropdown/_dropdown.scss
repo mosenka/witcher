@@ -1,0 +1,131 @@
+// dropdown
+
+.dropdown {
+	width: 100%;
+	position: relative;
+
+	&__head {
+		width: 100%;
+		position: relative;
+		padding: 1.6rem 2rem;
+		background-color: rgba($color-white, 0.1);
+		transition: all 0.4s;
+		cursor: pointer;
+
+
+		@include mobile-hr {
+			//padding: 1rem;
+			//font-size: 2rem;
+			//display: flex;
+			//align-items: center;
+			//justify-content: flex-start;
+			//gap: 1rem;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			right: 20px;
+			top: calc(50% - 20px /2);
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M16.3376 6.46658L16.3355 6.46664C16.2041 6.47038 16.0766 6.52248 15.9811 6.61657L9.99927 12.3257L4.01736 6.61655C3.91815 6.51882 3.78607 6.46959 3.65395 6.46776L3.65395 6.46771L3.64937 6.46775C3.44445 6.46961 3.25564 6.58749 3.17292 6.77698L3.1729 6.77697L3.1719 6.77935C3.0905 6.97257 3.13968 7.19127 3.29211 7.3337L9.63685 13.3891C9.83807 13.5812 10.1605 13.5812 10.3617 13.3891L16.706 7.3341C16.8609 7.19083 16.9094 6.96731 16.8259 6.77412L16.8259 6.77412L16.8252 6.77246C16.7403 6.58088 16.5457 6.46284 16.3376 6.46658Z' fill='white' stroke='white' stroke-width='0.4'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			background-position: center;
+			transition: transform .4s;
+
+			@include tablet {
+				right: 10px;
+			}
+
+
+		}
+
+		.is-open & {
+			//border-color: transparent;
+
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__content {
+		padding: 0;
+		width: 100%;
+		position: absolute;
+		z-index: 10;
+		left: 0;
+		top: 100%;
+		background-color: #323232;
+		user-select: none;
+		max-height: 0;
+		overflow: hidden;
+		//animation: close .4s;
+		color: rgba($color-white, 0.8);
+
+		.is-open & {
+			padding: 0.8rem 0;
+			max-height: 1000px;
+			border-color: #DEDEDE;
+			border-width: 1px;
+			animation: open .4s forwards;
+		}
+	}
+
+	&__item {
+		padding: 0.8rem 2rem;
+		cursor: pointer;
+		transition: all .3s;
+
+		@include tablet {
+			font-size: 2.4rem;
+		}
+
+		@include mobile-hr {
+			font-size: 2rem;
+			padding: 1rem;
+		}
+
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: rgba($color-white, 1);
+		}
+
+		&.is-active {
+			//color: $color-primary;
+		}
+	}
+
+}
+
+@keyframes open {
+	0% {
+		max-height: 0;
+		border-width: 0;
+		border-color: transparent;
+	}
+	100% {
+		max-height: 1000px;
+		border-width: 1px;
+		border-color: #DEDEDE;
+	}
+}
+
+
+@keyframes close {
+	0% {
+		max-height: 1000px;
+		border-width: 1px;
+		border-color: #DEDEDE;
+	}
+	100% {
+		max-height: 0;
+		border-width: 0;
+		border-color: transparent;
+	}
+}
+// end dropdown

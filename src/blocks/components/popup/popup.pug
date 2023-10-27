@@ -1,0 +1,7 @@
+mixin popup(title)
+	.popup&attributes(attributes)
+		._header
+			.title--h2!=title
+		._body
+			if block
+				block

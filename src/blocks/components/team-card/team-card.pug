@@ -1,0 +1,12 @@
+mixin teamCard(img, title, name, text)
+	.team-card&attributes(attributes)
+		img._img(src!=img)
+		._body
+			h4.title--h4.title--bold._title!=title
+			._name!=name
+		._overflow
+			._overflow-head
+				.title--h4.title--bold._title!=title
+				._name!=name
+			._text!=text
+

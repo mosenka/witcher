@@ -1,0 +1,25 @@
+.header {
+	width: 100%;
+	padding: 2rem 0;
+	z-index: 95;
+	background-color: $color-cod-gray;
+	color: $color-white;
+
+	@include tablet {
+		padding: 1.2rem 0;
+	}
+
+	@include mobile-hr {
+		padding: 1.6rem 0;
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+
+}
+
+

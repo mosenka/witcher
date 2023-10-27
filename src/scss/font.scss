@@ -1,0 +1,11 @@
+@import "helpers/mixins";
+
+// google fonts
+//@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// files fonts
+@include font("Futura PT", "../fonts/FuturaPT-Light", "300", "normal");
+@include font("Futura PT", "../fonts/FuturaPT-Regular", "400", "normal");
+@include font("Futura PT", "../fonts/FuturaPT-Medium", "500", "normal");
+@include font("Futura PT", "../fonts/FuturaPT-Semibold", "600", "normal");
+@include font("Futura PT", "../fonts/FuturaPT-Bold", "700", "normal");

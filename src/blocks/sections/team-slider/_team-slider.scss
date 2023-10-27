@@ -1,0 +1,56 @@
+.team-slider {
+	width: 100%;
+	overflow-x: hidden;
+
+	&__slider {
+		padding-top: 2rem;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 1.5rem;
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		gap: 2.4rem;
+		color: rgba($color-white, 0.3);
+
+		@include mobile-hr {
+			gap: 1.2rem;
+		}
+	}
+
+	&__pagination-wrapper {
+		width: 100%;
+		padding: 0.5rem 0;
+	}
+
+	&__pagination {
+		position: relative;
+		background-color: rgba($color-white, 0.3);
+		height: 4px;
+		width: 100%;
+		border-radius: 1px;
+
+	}
+
+	&__pagination--active {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $color-red;
+		border-radius: 1px;
+		transform-origin: left top;
+	}
+}
+
+.team-section {
+	width: 100%;
+	overflow-x: hidden;
+}

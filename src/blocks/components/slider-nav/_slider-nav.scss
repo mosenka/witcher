@@ -1,0 +1,30 @@
+.slider-nav {
+	color: currentColor;
+	cursor: pointer;
+	transition: all .4s;
+
+	@include states {
+		color: $color-accent;
+	}
+
+
+	&.is-disabled {
+		color: #6F6F6F;
+
+		@include states {
+			color: #6F6F6F;
+		}
+	}
+
+	svg {
+		@include size(32px, 32px);
+
+		@include mobile-hr {
+			@include size(28px, 28px);
+		}
+	}
+
+	&--prev {
+		transform: rotate(-180deg);
+	}
+}

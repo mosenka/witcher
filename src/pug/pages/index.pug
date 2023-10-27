@@ -1,0 +1,20 @@
+extends ../layouts/default
+
+prepend vars
+
+block content
+
+		// header start
+		include @sections/header/header
+		// header end
+		main.main
+			include @sections/offer/offer
+			include @sections/team-slider/team-slider
+			include @sections/gallery/gallery
+			include @sections/map/map
+			include @sections/privacy/privacy
+		//  footer
+		include @sections/footer/footer
+		// end footer
+
+

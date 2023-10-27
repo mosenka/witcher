@@ -1,0 +1,39 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	@include tablet {
+		gap: 1rem;
+	}
+
+	&.is-hidden {
+		display: none;
+	}
+
+	&__row {
+		display: flex;
+		gap: 2.4rem;
+
+		@include laptop {
+			flex-wrap: wrap;
+			gap: 1rem;
+		}
+	}
+
+	&__dropdown {
+		padding-bottom: 1rem;
+	}
+
+	&__button-wrapper {
+		.button {
+			@include mobile-hr {
+				width: 100%;
+			}
+
+		}
+	}
+
+
+
+}

@@ -1,0 +1,31 @@
+section.section
+	+container
+		._title
+			h2.title--h2
+				| Кадры со съемок
+	+container
+		.gallery
+			._item.-double
+				img._img(src="img/gallery/photo1.png" alt="photo1" width="300" height="300")
+			._item
+				img._img(src="img/gallery/photo2.png" alt="photo2" width="150" height="150")
+			._item
+				img._img(src="img/gallery/photo3.png" alt="photo3" width="150" height="150")
+			._item
+				img._img(src="img/gallery/photo4.png" alt="photo4" width="150" height="150")
+			._item
+				img._img(src="img/gallery/photo5.png" alt="photo5" width="150" height="150")
+		.gallery.is-hidden.js--gallery
+			._item
+				img._img(src="img/gallery/photo2.png" alt="photo2")
+			._item
+				img._img(src="img/gallery/photo3.png" alt="photo3")
+			._item
+				img._img(src="img/gallery/photo4.png" alt="photo4")
+			._item
+				img._img(src="img/gallery/photo5.png" alt="photo5")
+		.gallery__button-wrapper
+			+button("red--outline", 'l')(class="gallery__more js--gallery-more")
+				| Показать еще
+
+

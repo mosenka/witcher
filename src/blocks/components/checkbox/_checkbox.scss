@@ -1,0 +1,42 @@
+// checkbox
+$borderColor: rgba($color-white, 0.1);
+$checkedBG: rgba($color-white, 0.3);
+
+.checkbox {
+
+	&__input {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+	}
+
+	&__label {
+		display: inline-flex;
+		align-items: center;
+		justify-content: flex-start;
+		color: $color-white;
+		gap: 2rem;
+		cursor: pointer;
+
+		&::before {
+			content: "";
+			display: block;
+			flex: 0 0 3.2rem;
+			height: 3.2rem;
+			min-width: 3.2rem;
+			border: 1px solid $borderColor;
+			background-color: rgba($color-white, 0.1);
+			background-repeat: no-repeat;
+			background-position: center;
+			transition: all .3s;
+		}
+
+	}
+
+	&__input:not(:disabled):checked + &__label::before {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M17.981 3.79354L17.9809 3.79354C17.7563 3.80024 17.543 3.89393 17.3862 4.05481L7.33323 14.1077L3.28068 10.0552C3.20113 9.97276 3.10601 9.9069 3.00083 9.86144L2.92149 10.045L3.00083 9.86144C2.89499 9.81569 2.78109 9.79152 2.66579 9.79035C2.55049 9.78918 2.43611 9.81102 2.32936 9.8546C2.22261 9.89819 2.12563 9.96263 2.0441 10.0442C1.96256 10.1257 1.89812 10.2227 1.85453 10.3294C1.81095 10.4362 1.78911 10.5506 1.79028 10.6659C1.79145 10.7812 1.81562 10.8951 1.86137 11.0009C1.90682 11.1061 1.97268 11.2012 2.05513 11.2807L6.72045 15.9461L6.72048 15.9461C6.88301 16.1086 7.10342 16.1998 7.33323 16.1998C7.56304 16.1998 7.78344 16.1086 7.94597 15.9461L7.946 15.9461L18.6107 5.2814C18.611 5.28103 18.6114 5.28066 18.6118 5.28029C18.7364 5.15871 18.8215 5.00242 18.856 4.83176C18.8907 4.66058 18.8728 4.48293 18.8047 4.3221C18.7367 4.16126 18.6216 4.02474 18.4746 3.93042C18.3276 3.8361 18.1556 3.78839 17.981 3.79354Z' fill='white' stroke='white' stroke-width='0.4'/%3E%3C/svg%3E");
+	}
+
+
+}
+// end checkbox

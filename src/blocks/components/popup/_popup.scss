@@ -1,0 +1,87 @@
+// popup
+.popup {
+	min-width: 40%;
+	max-width: 75%;
+	position: relative;
+	padding: 5.6rem 8rem;
+	background-color: $color-white;
+
+	@include tablet {
+		padding: 4.8rem 4rem;
+	}
+
+	@include mobile-hr {
+		padding: 2.4rem 1.6rem;
+		min-width: 100%;
+		max-width: 100%;
+	}
+
+
+
+	&__header {
+		padding-bottom: 1.5rem;
+
+		@include tablet {
+			padding-bottom: 1.2rem;
+		}
+	}
+
+	&__body {
+		padding-top: 1.5rem;
+
+		@include tablet {
+			padding-top: 1.2rem;
+		}
+	}
+
+
+
+	&__close {
+		display: inline-block;
+		position: absolute;
+		right: 3.2rem;
+		top: 3.2rem;
+		color: $color-black;
+		padding: 0;
+		transition: color .4s;
+		cursor: pointer;
+
+		@include states {
+			color: $color-accent;
+		}
+
+
+		@include mobile {
+			right: 1.6rem;
+			top: 2.4rem;
+		}
+	}
+
+	&__icon {
+		width: 24px;
+		height: 24px;
+		stroke: currentColor;
+		fill: none;
+	}
+
+	&__header {
+		padding-bottom: 1rem;
+	}
+
+	&__body {
+		position: relative;
+		padding-top: 2rem;
+		color: #08031A;
+		//max-width: 30rem;
+	}
+}
+
+.fancybox__slide {
+	@include mobile-hr {
+		padding: 0;
+	}
+}
+
+
+
+// end popup

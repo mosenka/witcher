@@ -1,0 +1,102 @@
+
+body,
+input,
+textarea,
+button,
+select {
+	font-family: $font-family-FuturaPT;
+	font-size: $fontsize;
+	font-weight: 400;
+	line-height: $lineHeight;
+	color: $color;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family:$font-family-FuturaPT;
+}
+
+
+
+
+h1, .title--h1 {
+	font-size: 5.6rem;
+	font-weight: 600;
+
+	@include tablet {
+		font-size: 4rem;
+	}
+
+	@include mobile {
+		font-size: 3.2rem;
+	}
+}
+
+h4, .title--h2 {
+	font-size: 4rem;
+	font-weight: 600;
+
+	@include tablet {
+		font-size: 3.2rem;
+	}
+
+	@include mobile {
+		font-size: 2.8rem;
+	}
+}
+
+h3, .title--h3 {
+	font-size: 3.2rem;
+	font-weight: 600;
+
+	@include tablet {
+		font-size: 2.4rem;
+	}
+
+	@include mobile {
+		font-size: 2.4rem;
+	}
+}
+
+h4, .title--h4 {
+	font-size: 2.4rem;
+
+	@include tablet {
+		font-size: 2rem;
+	}
+
+	@include mobile {
+		font-size: 1.6rem;
+	}
+}
+
+.title--bold {
+	font-weight: 600;
+}
+
+.title--no--bold {
+	font-weight: 400;
+}
+
+
+.text {
+	font-size: 1.6rem;
+
+	&--bold {
+		font-weight: 600;
+	}
+	&--no--bold {
+		font-weight: 400;
+	}
+}
+
+
+.link {
+	opacity: 0.7;
+	text-decoration: underline;
+	transition: all .4s;
+
+	@include states {
+		color: $color-red;
+	}
+}

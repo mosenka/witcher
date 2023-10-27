@@ -1,0 +1,26 @@
+-
+	var dropList = [
+		'Москва',
+		'Санкт-Питербург',
+		'Казань',
+		'Краснодар',
+		'Ростов на дону'
+	]
+
+
+form.form.js--form
+	._dropdown
+		+dropdown('Выберете город', dropList)
+	+inputText('Имя', true)
+	._row
+		+inputText('Email')(class="js--input-email")
+		+inputText('Номер телефона')(class="js--input-phone")
+	+textarea('Номер телефона')
+	+inputFile('Прикрепите файл')
+	._acpt
+		+checkbox('Даю согласие на обработку своих персональных данных', 'acpt')
+	._button-wrapper
+		+button('red')(type="submit")
+			| Оставить заявку
+
+

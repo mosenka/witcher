@@ -1,0 +1,18 @@
+.form-layout {
+	padding-top: 4rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 12rem;
+	padding-bottom: 5rem;
+
+	@include laptop {
+		gap: 5rem;
+	}
+
+	@include mobile-hr {
+		grid-template-columns: 1fr;
+		gap: 4rem;
+	}
+
+
+}

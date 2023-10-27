@@ -1,0 +1,4 @@
+mixin sliderNav(isLeft=false)
+	- var classes = ['slider-nav', isLeft ? 'slider-nav--prev': 'slider-nav--next']
+	div(class=classes)&attributes(attributes)
+		+svg("sliderArrow")

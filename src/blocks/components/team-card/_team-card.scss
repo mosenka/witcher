@@ -1,0 +1,123 @@
+.team-card {
+	position: relative;
+	aspect-ratio: 7 / 10;
+	width: 100%;
+	background-color: $color-cod-gray;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	box-sizing: border-box;
+	overflow: hidden;
+	cursor: pointer;
+
+	&__img {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+
+	}
+
+	@include tablet {
+		aspect-ratio: 32 / 45;
+	}
+
+	@include mobile-hr {
+		aspect-ratio: 5 / 6;
+	}
+
+	@include mobile {
+		aspect-ratio: 11 / 14;
+	}
+
+	&__body {
+		position: relative;
+		z-index: 2;
+		//display: none;
+		height: 100%;
+		width: 100%;
+		padding: 3.2rem 2.4rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		transition: all .4s;
+
+		@include tablet {
+			padding: 2.4rem 1.6rem;
+		}
+
+		.team-card:hover & {
+			transform: translateY(100%);
+		}
+
+	}
+
+	&__overflow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		z-index: 2;
+		height: 100%;
+		width: 100%;
+		padding: 3.2rem 2.4rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.80) 100%);
+		transition: opacity 0.3s;
+
+		.team-card:hover & {
+			opacity: 1;
+		}
+
+
+	}
+
+	&__overflow-head {
+		flex: 1 1 50%;
+		transform: translateY(-50%);
+		transition: all .4s;
+
+		.team-card:hover & {
+			transform: translateY(0);
+		}
+
+	}
+
+
+
+	&__text {
+		transition: all .4s;
+		transform: translateY(150%);
+
+		.team-card:hover & {
+			transform: translateY(0);
+		}
+
+		@include tablet {
+			overflow: auto;
+		}
+		//display: none;
+	}
+
+	&__title {
+		padding-bottom: 0.4rem;
+	}
+
+	&__name {
+		font-size: 2.4rem;
+
+		@include tablet {
+			font-size: 2rem;
+		}
+
+		@include mobile-hr {
+			font-size: 1.6rem;
+		}
+
+	}
+}

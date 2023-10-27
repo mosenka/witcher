@@ -1,0 +1,128 @@
+@use "sass:map";
+@import "../../../node_modules/normalize-scss/sass/normalize";
+
+
+html {
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: $font-primary;
+    font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+
+body {
+	margin: 0;
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 320px;
+	min-height: 100vh;
+    background-color: $color-cod-gray;
+
+	@include mobile-hr {
+		font-size: 1.4rem;
+	}
+
+	&.is-fixed {
+		overflow: hidden;
+	}
+}
+
+.main {
+	flex: 1 1 auto;
+	width: 100%;
+	//padding-top: map.get($headerHeight, 'desktop');
+
+
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: currentColor;
+    cursor: pointer;
+}
+
+svg {
+    display: block;
+    flex: 0 0 auto;
+    fill: currentColor;
+}
+
+img {
+    vertical-align: top;
+    max-width: 100%;
+    user-select: none;
+}
+
+
+button {
+	background-color: transparent;
+	outline: none;
+	border: none;
+
+	&:not([disabled]):hover,
+	&:not([disabled]):focus,
+	&:not([disabled]):active {
+		box-shadow: none;
+		outline: none;
+	}
+}
+
+ul, ul li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.section {
+	padding: 3.6rem 0;
+	width: 100%;
+
+	@include tablet {
+		padding: 3.2rem 0;
+	}
+
+
+	&--padding-top--72 {
+		padding-top: 7.2rem;
+
+	}
+
+	&__title {
+		padding-bottom: 3.5rem;
+	}
+
+}
+
+.title {
+	font-size: 4rem;
+	line-height: 1.1;
+	font-weight: 500;
+
+	@include tablet {
+		font-size: 3.2rem;
+	}
+
+	@include mobile-hr {
+		font-size: 2.6rem;
+	}
+}
+
+.is-accent {
+	color: $color-accent;
+}
+.is-hidden {
+	display: none;
+}
+

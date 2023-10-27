@@ -1,0 +1,10 @@
+mixin inputText(label, isError=false)
+	- var classes = [ isError && 'is-error']
+
+	.input-text.js--text-input-wrapper(class=classes)
+		input._input.js--text-input(type="text", value="")&attributes(attributes)
+		span._placeholder.js--text-placeholder!=label
+		if isError
+			span._error
+				| Поле не заполненно
+
