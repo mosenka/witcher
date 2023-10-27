@@ -1,3 +1,13 @@
+# Тестовое задание #
+
+
+## DEMO ##
+
+- [Главная](https://mosenka.github.io/witcher/dist/)
+- [Форма](https://mosenka.github.io/witcher/dist/form.html)
+
+
+
 ### запуск ###
 Скрипты вынесены в package.json раздел scripts
 
@@ -31,6 +41,7 @@ npm run zip
 ## Пути ##
 
 Исходные файлы директория **./src/**
+- **blocks** - библиотека компонентов (по БЭМ)
 - **pug** html шаблоны страниц (реализовано через [gulp-pug]("https://www.npmjs.com/package/gulp-pug") )
 - **scss** общие настройки стилей
 - **js**  общие скрипты  подключен *WEBPACK* и **import**
@@ -77,13 +88,12 @@ npm run zip
 - далее в pug использовать через миксин *+svg("ИМЯ_ФАЙЛА")*
 
 
-
 ## Библиотеки ##
 - [swiper](https://swiperjs.com/)
 - [Fancybox](https://fancyapps.com/fancybox/getting-started/) - для popup
 - [inputmask](https://robinherbots.github.io/Inputmask/) - для валидации инпутов с номерами телефонов и email
 
-Стараемся библиотеками не злоупотреблять используем только в случае необходимости
 
-## DEMO ##
+
+
 
