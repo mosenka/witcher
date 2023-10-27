@@ -40,6 +40,20 @@ export const map = () => {
 
 			}
 		})
+		mapWrapper.addEventListener('click', function (e) {
+			const spinner = mapWrapper.querySelector('.loader');
+
+			if (!check_if_load) {
+
+				check_if_load = true;
+				spinner.classList.add('is-active');
+
+				loadScript(url, function () {
+					ymaps.load(() => init(spinner, id, centerPoints));
+				});
+
+			}
+		})
 	}
 
 	function init(spinner, id) {
